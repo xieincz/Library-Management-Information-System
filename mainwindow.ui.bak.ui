@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="unlogined" native="true">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1280</width>
+      <height>720</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>811</width>
+      <height>501</height>
+     </size>
+    </property>
+    <widget class="QWidget" name="widget" native="true">
+     <property name="geometry">
+      <rect>
+       <x>340</x>
+       <y>210</y>
+       <width>600</width>
+       <height>300</height>
+      </rect>
+     </property>
+     <widget class="LabeledEdit" name="usernanmeInput" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>600</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>249</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="toolTip">
+       <string>用户名</string>
+      </property>
+      <property name="toolTipDuration">
+       <number>1000</number>
+      </property>
+      <property name="statusTip">
+       <string>请输入用户名</string>
+      </property>
+      <property name="whatsThis">
+       <string>不要使用非法字符</string>
+      </property>
+      <property name="accessibleName">
+       <string>1234565</string>
+      </property>
+      <property name="accessibleDescription">
+       <string>6546543513</string>
+      </property>
+     </widget>
+     <widget class="LabeledEdit" name="passInput" native="true">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>600</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>249</width>
+        <height>50</height>
+       </size>
+      </property>
+     </widget>
+     <widget class="InteractiveButtonBase" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>200</y>
+        <width>300</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="statusTip">
+       <string>1234</string>
+      </property>
+      <property name="text">
+       <string>登录</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>230</y>
+        <width>198</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QRadioButton" name="openReaderUI">
+         <property name="text">
+          <string>读者界面</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="openAdminUI">
+         <property name="text">
+          <string>管理员界面</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>InteractiveButtonBase</class>
+   <extends>QPushButton</extends>
+   <header location="global">interactive_buttons/interactivebuttonbase.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LabeledEdit</class>
+   <extends>QWidget</extends>
+   <header location="global">labeled_edit/labelededit.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>changePassDialog</class>
+ <widget class="QDialog" name="changePassDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>640</width>
+    <height>480</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>640</width>
+    <height>480</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">font: 75 12pt &quot;微软雅黑&quot;;</string>
+  </property>
+  <widget class="QWidget" name="inputPassWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <widget class="InteractiveButtonBase" name="confirmPassButton">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>410</y>
+      <width>190</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确定</string>
+    </property>
+   </widget>
+   <widget class="LabeledEdit" name="passInput_2" native="true">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>240</y>
+      <width>400</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LabeledEdit" name="passInput_1" native="true">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>120</y>
+      <width>400</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="InteractiveButtonBase" name="cancelButton_2">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>410</y>
+      <width>190</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="sendEmailWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>640</width>
+     <height>480</height>
+    </rect>
+   </property>
+   <widget class="LabeledEdit" name="emailCodeInput" native="true">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>340</y>
+      <width>400</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LabeledEdit" name="captchaLabelInput" native="true">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>200</y>
+      <width>240</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="LabeledEdit" name="userIDInput" native="true">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>400</width>
+      <height>60</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="InteractiveButtonBase" name="confirmButton">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>410</y>
+      <width>190</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>确认</string>
+    </property>
+   </widget>
+   <widget class="InteractiveButtonBase" name="sendButton">
+    <property name="geometry">
+     <rect>
+      <x>360</x>
+      <y>200</y>
+      <width>160</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>发送验证码</string>
+    </property>
+   </widget>
+   <widget class="InteractiveButtonBase" name="cancelButton">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>410</y>
+      <width>190</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>取消</string>
+    </property>
+   </widget>
+   <widget class="CaptchaBox" name="captchaLabel" native="true">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>90</y>
+      <width>400</width>
+      <height>100</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>89</x>
+      <y>270</y>
+      <width>461</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>邮件验证码将会发送到你的注册邮箱，请注意查收</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>InteractiveButtonBase</class>
+   <extends>QPushButton</extends>
+   <header location="global">interactive_buttons/interactivebuttonbase.h</header>
+  </customwidget>
+  <customwidget>
+   <class>LabeledEdit</class>
+   <extends>QWidget</extends>
+   <header location="global">labeled_edit/labelededit.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>CaptchaBox</class>
+   <extends>QWidget</extends>
+   <header location="global">captchabox/captchabox.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>sendButton</tabstop>
+  <tabstop>confirmButton</tabstop>
+  <tabstop>confirmPassButton</tabstop>
+  <tabstop>cancelButton_2</tabstop>
+  <tabstop>cancelButton</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>

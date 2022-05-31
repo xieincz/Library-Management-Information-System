@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/bg">
+        <file alias="p1">pic/janko-ferlic-sfL_QOnmy00-unsplash.jpg</file>
+        <file alias="p2">pic/wallhaven-j8mqyp_1920x1080.png</file>
+    </qresource>
+</RCC>
