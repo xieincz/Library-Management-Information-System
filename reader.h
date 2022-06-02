@@ -5,7 +5,7 @@
 #include"smtp/smtp.h"
 #include"encryptpass.h"//密码加盐哈希处理
 #include"toast/toast.h"
-
+#include<QDateTimeEdit>
 struct Email{
     QString email,title,content;
     Email(const QString& emailAdress,const QString& title,const QString& content)
@@ -17,7 +17,7 @@ class Reader
 public:
     Reader();
     Reader(const Reader& r);
-    bool newReader(QString readerID="",QString name="",QString readerKind="",QString sex="",QString phone="",QString email="",QString remark="",QString password="",QString registerDate="",int borrowNumber=0,int period=0,int renewal=0);
+    bool newReader(QString readerID="",QString name="",QString readerKind="",QString sex="",QString phone="",QString email="",QString remark="",QString password="",QDate registerDate=QDate::currentDate(),int borrowNumber=0,int period=0,int renewal=0);
     bool deleteReader(QString readerID);
     bool setReaderID(QString readerID);
     bool readerLogin(QString readerID,QString password);

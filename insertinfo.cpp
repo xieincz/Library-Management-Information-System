@@ -232,7 +232,7 @@ void insertInfo::on_summitButton_clicked()
             se->hide();
             return;//后面的操作交给验证页面完成
         }
-        success=reader.newReader(ui->w11->text().trimmed(),ui->w21->text().trimmed(),rk->currentText().trimmed(),se->currentText().trimmed(),ui->w22->text().trimmed(),ui->w31->text().trimmed(),ui->w32->text().trimmed(),ui->w12->text().trimmed(),QDate::currentDate().toString(),bn,pe,re);
+        success=reader.newReader(ui->w11->text().trimmed(),ui->w21->text().trimmed(),rk->currentText().trimmed(),se->currentText().trimmed(),ui->w22->text().trimmed(),ui->w31->text().trimmed(),ui->w32->text().trimmed(),ui->w12->text().trimmed(),QDate::currentDate(),bn,pe,re);
     }
     if(success)
     {
@@ -267,6 +267,7 @@ void insertInfo::on_sendButton_clicked()
             //产生一个5位数的随机数
             //将验证码加入字符串
             verificationCode =  QRandomGenerator::global()->bounded(10000, 99999);
+
             reader.sendEmail({email,"图书馆验证码",QString("验证码为 %1 ，若非本人操作，请勿告诉他人。").arg(verificationCode)});
         });
         Toast::showMsg(QString("  验证码已经发送到注册邮箱 %1  ").arg(email));

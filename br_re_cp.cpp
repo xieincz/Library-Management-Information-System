@@ -49,6 +49,7 @@ void br_Re_Cp::on_confirmButton_clicked()
         ui->input->showWrong("输入不能为空",true);
         return;
     }
+    bool success=false;
     switch (type)
     {
     case returnBook://还书
@@ -60,7 +61,9 @@ void br_Re_Cp::on_confirmButton_clicked()
         }
         int t=book.overdue(reader.getReaderID(),reader.getPeriod());
         if(t==0)
-            book.returned(reader.getReaderID());
+        {
+            success=book.returned(reader.getReaderID());
+        }
         else if(t>0)
         {
             compensateDialog* co=new compensateDialog(reader.getReaderID());
@@ -78,16 +81,21 @@ void br_Re_Cp::on_confirmButton_clicked()
             ui->input->showWrong("请检查输入的ISBN是否正确");
             return;
         }
-        book.lend(reader.getReaderID(),reader.getBorrowNumber());
+        success=book.lend(reader.getReaderID(),reader.getBorrowNumber());
         break;
     }
     case changePassWord://修改密码
     {
-        reader.setReaderID(reader.getReaderID());
-        reader.changePassword(ui->input->text().trimmed());
+        success=reader.setReaderID(reader.getReaderID());
+        if(success)
+            success=reader.changePassword(ui->input->text().trimmed());
         break;
     }
     }
+    if(success)
+        Toast::showMsg("操作成功",ToastTime::ToastTime_short);
+    else
+        Toast::showMsg("操作失败，请检查输入信息或者网络连接",ToastTime::ToastTime_short);
     this->close();
 }
 

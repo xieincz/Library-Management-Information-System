@@ -24,7 +24,7 @@ Reader::Reader(const Reader &r)
     borrowNumber=r.borrowNumber,period=r.period,renewal=r.renewal;
 }
 
-bool Reader::newReader(QString readerID, QString name, QString readerKind, QString sex, QString phone, QString email, QString remark, QString password, QString registerDate,int borrowNumber, int period, int renewal)
+bool Reader::newReader(QString readerID, QString name, QString readerKind, QString sex, QString phone, QString email, QString remark, QString password,QDate registerDate,int borrowNumber, int period, int renewal)
 {
     QSqlQuery q;
     q.prepare("insert into reader(reader_id,password,name,reader_kind,"
@@ -136,8 +136,8 @@ void Reader::sendEmail(QString title,QString content)
 
 void Reader::sendEmail(Email email)
 {
-    Smtp send("rolbo@qq.com","qxuhcwfbecdiebij");
-    send.send(email.email.toUtf8().toBase64(),email.title,email.content);
+    Smtp send("rolbo@qq.com","colbhvhayglsdjdg");
+    send.send(email.email.toUtf8(),email.title,email.content);
 }
 
 int Reader::renewBook(QString ISBN)

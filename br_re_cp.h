@@ -13,6 +13,7 @@ enum opType{
     borrowBook,returnBook,changePassWord
 };
 
+//用于管理员和读者界面的数据修改操作
 class br_Re_Cp : public QDialog
 {
     Q_OBJECT
