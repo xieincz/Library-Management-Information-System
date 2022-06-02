@@ -16,9 +16,7 @@ public:
 
 private:
     QString adminID;
-    QString name;
     QString password;
-    QString email;
     QString entryDate;
     QString remark;
 };

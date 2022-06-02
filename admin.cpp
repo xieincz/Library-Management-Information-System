@@ -22,9 +22,7 @@ bool Admin::setAdminID(QString adminID)
 
 void Admin::sendEmail(QString title, QString content)
 {
-    Reader::name=name;
-    Reader::email=email;
-    Reader::sendEmail(title,content);
+    Reader::sendEmail({email,title,content});
 }
 
 void Admin::clear()

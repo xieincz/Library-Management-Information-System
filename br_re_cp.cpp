@@ -96,4 +96,3 @@ void br_Re_Cp::on_cancelButton_clicked()
 {
     this->close();
 }
-

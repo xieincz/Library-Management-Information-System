@@ -277,6 +277,3 @@ void Book::totalNumberAdd(const int &num)
     if(!q.exec())
         Toast::showMsg("数据修改失败");
 }
-
-
-

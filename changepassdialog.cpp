@@ -146,4 +146,3 @@ void changePassDialog::on_confirmPassButton_clicked()
         ui->passInput_2->showWrong("两次输入的密码不一致");
     }
 }
-
