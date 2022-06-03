@@ -26,7 +26,7 @@ Reader::Reader(const Reader &r)
 
 bool Reader::newReader(QString readerID, QString name, QString readerKind, QString sex, QString phone, QString email, QString remark, QString password,QDate registerDate,int borrowNumber, int period, int renewal)
 {
-    QSqlQuery q;
+    QSqlQuery q;//一定要在QSqlDatabase建立了数据库连接后声明才能正常连接到数据库执行SQL
     q.prepare("insert into reader(reader_id,password,name,reader_kind,"
               "sex,phone,email,borrow_number,period,renewal,register_date,"
               "remark) values(:reader_id,:password,:name,:reader_kind,:sex,"
